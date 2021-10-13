@@ -32,5 +32,60 @@
      WHERE ROWNUM <= 5;
     ```
 
-3. 현재 날짜 
+3. 날짜 형식 
+
+    MySql: DATE_FORMAT(날짜열, '형식')
+
+    ```sql
+    SELECT DATE_FORMAT(NOW(), '%Y%m%d %H%i%s') AS date; 
+    
+    ```
+
+    Oracle: TO_CHAR(날짜열, '형식')
+
+    ```sql
+    SELECT TO_CHAR(SYS_DATE, 'YYYYMMDD HH24MISS') AS date 
+      FROM DUAL;
+    ```
+    
+    출력: 20211008 213004 
+    
+4. 문자 결합 
+   
+    MySql: CONCAT(열값 또는 문자열, 열값 또는 문자열)
+
+    ```sql
+    SELECT CONCAT('A','B') TEXT;
+    
+    ```
+
+    Oracle: 열값 또는 문자열 || 열값 또는 문자열
+
+    ```sql
+    SELECT 'A' || 'B' TEXT
+      FROM DUAL;
+    ```
+    
+    출력: AB
+    
+5. 문자 추출
+   
+    MySql: SUBSTRING(열값 또는 문자열, 시작 위치, 추출하려는 문자 개수) 
+
+    ```sql
+    SELECT SUBSTRING('ABCDE',2,3) AS sub_string;
+    
+    ```
+
+# 튜닝 용어
+
+    
+   
+    
+    
+
+
+
+
+
 
